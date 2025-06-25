@@ -16,4 +16,37 @@ datasource db {
 }
 
 model Player {
-  id        Int            @
+  id            Int            @id
+  fullName      String
+  position      String
+  country       String
+  careerGoals   Int
+  careerAssists Int
+  gamesPlayed   Int
+  heightInches  Int
+  weightPounds  Int
+  shootsCatches String
+  isActive      Boolean
+  picture       String
+  teams         PlayerTeam[]
+}
+
+model Team {
+  id            Int          @id
+  abbreviation  String
+  name          String
+  logo          String
+  players       PlayerTeam[]
+}
+
+model PlayerTeam {
+  id        Int    @id @default(autoincrement())
+  playerId  Int
+  teamId    Int
+  season    String
+
+  player    Player @relation(fields: [playerId], references: [id])
+  team      Team   @relation(fields: [teamId], references: [id])
+
+  @@unique([playerId, teamId, season]) // prevents duplicate rows
+}
