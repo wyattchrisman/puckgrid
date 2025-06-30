@@ -1,0 +1,238 @@
+{
+    "MTL": {
+        "name": "Montréal Canadiens",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_19171918-19181919_light.svg"
+    },
+    "TAN": {
+        "name": "Toronto Arenas",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TAN_19171918-19181919_light.svg"
+    },
+    "SEN": {
+        "name": "Ottawa Senators (1917)",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/SEN_19171918-19331934_light.svg"
+    },
+    "MWN": {
+        "name": "Montreal Wanderers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/MWN_19171918_light.svg"
+    },
+    "TSP": {
+        "name": "Toronto St. Patricks",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TSP_19191920-19211922_light.svg"
+    },
+    "QBD": {
+        "name": "Quebec Bulldogs",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/QBD_19191920_light.svg"
+    },
+    "HAM": {
+        "name": "Hamilton Tigers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/HAM_19201921_light.svg"
+    },
+    "MMR": {
+        "name": "Montreal Maroons",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/MMR_19241925_light.svg"
+    },
+    "BOS": {
+        "name": "Boston Bruins",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/BOS_19241925-19251926_light.svg"
+    },
+    "PIR": {
+        "name": "Pittsburgh Pirates",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/PIR_19251926-19271928_light.svg"
+    },
+    "NYA": {
+        "name": "New York Americans",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/NYA_19251926-19291930_light.svg"
+    },
+    "NYR": {
+        "name": "New York Rangers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/NYR_19261927-19341935_light.svg"
+    },
+    "CHI": {
+        "name": "Chicago Blackhawks",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_19261927-19561957_light.svg"
+    },
+    "DCG": {
+        "name": "Detroit Cougars",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/DCG_19261927-19291930_light.svg"
+    },
+    "TOR": {
+        "name": "Toronto Maple Leafs",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_19271928-19371938_light.svg"
+    },
+    "DFL": {
+        "name": "Detroit Falcons",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/DFL_19301931-19311932_light.svg"
+    },
+    "QUA": {
+        "name": "Philadelphia Quakers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/QUA_19301931_light.svg"
+    },
+    "DET": {
+        "name": "Detroit Red Wings",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/DET_19321933-19471948_light.svg"
+    },
+    "SLE": {
+        "name": "St. Louis Eagles",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/SLE_19341935_light.svg"
+    },
+    "BRK": {
+        "name": "Brooklyn Americans",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/BRK_19411942_light.svg"
+    },
+    "PHI": {
+        "name": "Philadelphia Flyers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/PHI_19671968-19981999_light.svg"
+    },
+    "LAK": {
+        "name": "Los Angeles Kings",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/LAK_19671968-19741975_light.svg"
+    },
+    "PIT": {
+        "name": "Pittsburgh Penguins",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/PIT_19671968_light.svg"
+    },
+    "MNS": {
+        "name": "Minnesota North Stars",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/MNS_19671968-19841985_light.svg"
+    },
+    "STL": {
+        "name": "St. Louis Blues",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/STL_19671968-19771978_light.svg"
+    },
+    "OAK": {
+        "name": "Oakland Seals",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/OAK_19671968-19691970_light.svg"
+    },
+    "VAN": {
+        "name": "Vancouver Canucks",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_19701971-19771978_light.svg"
+    },
+    "CSE": {
+        "name": "California Golden Seals",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CGS_19701971-19731974_light.svg"
+    },
+    "BUF": {
+        "name": "Buffalo Sabres",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/BUF_19701971-19951996_light.svg"
+    },
+    "AFM": {
+        "name": "Atlanta Flames",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/AFM_19721973-19791980_light.svg"
+    },
+    "NYI": {
+        "name": "New York Islanders",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/NYI_19721973-19941995_light.svg"
+    },
+    "KCS": {
+        "name": "Kansas City Scouts",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/KCS_19741975-19761977_light.svg"
+    },
+    "WSH": {
+        "name": "Washington Capitals",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/WSH_19741975-19941995_light.svg"
+    },
+    "CBN": {
+        "name": "Cleveland Barons",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CLE_19761977-19771978_light.svg"
+    },
+    "CLR": {
+        "name": "Colorado Rockies",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CLR_19761977-19811982_light.svg"
+    },
+    "QUE": {
+        "name": "Quebec Nordiques",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/QUE_19791980-19941995_light.svg"
+    },
+    "HFD": {
+        "name": "Hartford Whalers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/HFD_19791980-19911992_light.svg"
+    },
+    "EDM": {
+        "name": "Edmonton Oilers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/EDM_19791980-19851986_light.svg"
+    },
+    "WIN": {
+        "name": "Winnipeg Jets (1979)",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/WIN_19791980-19891990_light.svg"
+    },
+    "CGY": {
+        "name": "Calgary Flames",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CGY_19801981-19931994_light.svg"
+    },
+    "NJD": {
+        "name": "New Jersey Devils",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/NJD_19821983-19911992_light.svg"
+    },
+    "SJS": {
+        "name": "San Jose Sharks",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/SJS_19911992-19971998_light.svg"
+    },
+    "TBL": {
+        "name": "Tampa Bay Lightning",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_19921993-20002001_light.svg"
+    },
+    "OTT": {
+        "name": "Ottawa Senators",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/OTT_19921993-19961997_light.svg"
+    },
+    "DAL": {
+        "name": "Dallas Stars",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/DAL_19931994_light.svg"
+    },
+    "FLA": {
+        "name": "Florida Panthers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/FLA_19931994-19981999_light.svg"
+    },
+    "ANA": {
+        "name": "Anaheim Ducks",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/ANA_19931994-19951996_light.svg"
+    },
+    "COL": {
+        "name": "Colorado Avalanche",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/COL_19951996-19981999_light.svg"
+    },
+    "PHX": {
+        "name": "Phoenix Coyotes",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/PHX_19961997-19981999_light.svg"
+    },
+    "CAR": {
+        "name": "Carolina Hurricanes",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CAR_19971998-19981999_light.svg"
+    },
+    "NSH": {
+        "name": "Nashville Predators",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/NSH_19981999-20102011_light.svg"
+    },
+    "ATL": {
+        "name": "Atlanta Thrashers",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/ATL_19992000-20102011_light.svg"
+    },
+    "MIN": {
+        "name": "Minnesota Wild",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/MIN_20002001-20122013_light.svg"
+    },
+    "CBJ": {
+        "name": "Columbus Blue Jackets",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/CBJ_20002001-20062007_light.svg"
+    },
+    "WPG": {
+        "name": "Winnipeg Jets",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_light.svg"
+    },
+    "ARI": {
+        "name": "Arizona Coyotes",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/ARI_20142015-20202021_light.svg"
+    },
+    "VGK": {
+        "name": "Vegas Golden Knights",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg"
+    },
+    "SEA": {
+        "name": "Seattle Kraken",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg"
+    },
+    "UTA": {
+        "name": "Utah Hockey Club",
+        "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_20242025-20242025_light.svg"
+    }
+}

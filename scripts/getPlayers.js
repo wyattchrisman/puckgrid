@@ -1,29 +1,12 @@
-// Get teams from api and fetch their data
-const response_teams = await fetch("https://api.nhle.com/stats/rest/en/team");
-const data_teams = await response_teams.json();
 
-// Extract data from json
-const teams = data_teams.data;
-
-// Create list to hold team abreviations
-let teamAbbreviations = [];
-
-// Loop through teams and extract abbreviation
-let i = 0;
-for (const team of teams) {
-    teamAbbreviations[i] = team.triCode;
-    i = i + 1;
-}
-
-// Remove the to be decided team abreviation
-const itemToRemove = 'TBD';
-teamAbbreviations = teamAbbreviations.filter(item => item !== itemToRemove);
+// Take out all team abbreviations
+const allTeamAbbreviations = Object.keys(allTeamsData);
 
 // Loop through all years and team abbreviations and get needed information
 let year = 1917;
+const currentYear = new Date().getFullYear();
 let yearPlusOne = year + 1;
 let yearStr = "";
-const currentYear = new Date().getFullYear();
 
 // Loop through all years of all teamas to get players
 while (yearPlusOne <= currentYear) {
@@ -31,7 +14,7 @@ while (yearPlusOne <= currentYear) {
     yearStr = year.toString() + yearPlusOne.toString();
 
     // Loop through all teams to get players
-    for (const abbreviation of teamAbbreviations) {
+    for (const abbreviation of allTeamAbbreviations) {
         // Set link and get response from api
         const link = "https://api-web.nhle.com/v1/roster/" + abbreviation + "/" + yearStr
         let response_players = await fetch(link);
@@ -54,8 +37,6 @@ while (yearPlusOne <= currentYear) {
     year = year + 1;
     yearPlusOne = yearPlusOne + 1;
 }
-
-
 
 // Get all player ids and add to list
 function getPlayerIds(forwards, defensemen, goalies) {
