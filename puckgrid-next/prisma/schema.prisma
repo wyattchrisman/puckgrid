@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -16,7 +15,7 @@ datasource db {
 }
 
 model Player {
-  id            Int            @id
+  id            Int            @id @default(autoincrement())
   fullName      String
   position      String
   country       String
@@ -28,12 +27,13 @@ model Player {
   shootsCatches String
   isActive      Boolean
   picture       String
+  birthDate     String
   teams         PlayerTeam[]
 }
 
 model Team {
-  id            Int          @id
-  abbreviation  String
+  id            Int          @id @default(autoincrement())
+  abbreviation  String       @unique
   name          String
   logo          String
   players       PlayerTeam[]

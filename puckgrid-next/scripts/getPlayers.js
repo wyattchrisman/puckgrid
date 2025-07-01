@@ -1,3 +1,7 @@
+import { readFile } from 'fs/promises';
+
+// Read in all team data from file
+const allTeamsData = await loadTeamData();
 
 // Take out all team abbreviations
 const allTeamAbbreviations = Object.keys(allTeamsData);
@@ -62,4 +66,9 @@ function getPlayerIds(forwards, defensemen, goalies) {
     }
 
     return playerIdList
+}
+
+async function loadTeamData() {
+    const data = await readFile('scripts/allTeamsData.json', 'utf-8');
+    return JSON.parse(data);
 }
