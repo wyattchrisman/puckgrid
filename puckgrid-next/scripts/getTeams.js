@@ -33,20 +33,20 @@ async function main() {
             
 
             const teamData = {
-                abbreviation: currentTeamAbbv,
+                id: currentTeamAbbv,
                 name: currentTeamName,
                 logo: currentTeamLogo
             };
     
             // Only update logo
             await prisma.team.upsert({
-                where: { abbreviation: currentTeamAbbv },
+                where: { id: currentTeamAbbv },
                 update: {
                   name: currentTeamName,
                   logo: currentTeamLogo, 
                 },
                 create: {
-                  abbreviation: currentTeamAbbv,
+                  id: currentTeamAbbv,
                   name: currentTeamName,
                   logo: currentTeamLogo,
                 },

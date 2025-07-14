@@ -12,7 +12,7 @@ async function main() {
     const allTeamAbbreviations = Object.keys(allTeamsData);
 
     // Loop through all years and team abbreviations and get needed information
-    let year = 1917;
+    let year = 2014;
     const currentYear = new Date().getFullYear();
     let yearPlusOne = year + 1;
     let yearStr = "";
@@ -43,37 +43,90 @@ async function main() {
                     const playerLink = "https://api-web.nhle.com/v1/player/"+playerID+"/landing"
                     let player_response = await fetch(playerLink);
 
+                    // Check if json is valid 
                     if(player_response.ok) {
                         let player = await player_response.json();
+                        //console.log("Start " + playerID)
+
+                        // Check if player played a regular season game
+                        if (player.careerTotals == undefined || player.careerTotals.regularSeason == undefined) {
+                            continue;
+                        }
+
+                        // Check if player played this season
+                        if (player.featuredStats.season < parseInt(yearStr)) {
+                            continue;
+                        }
+
+                        /* Set default height and weight
+                        if ((player.heightInInches == undefined) || (player.weightInPounds == undefined)) {
+                            var playerHeight = 72;
+                            var playerWeight = 200;
+                        } else {
+                            var playerHeight = player.heightInInches;
+                            var playerWeight = player.weightInPounds;
+                        }
+                        */
 
                         const playerData = {
+                            id: playerID,
                             fullName: player.firstName.default + " " + player.lastName.default,
                             position: player.position,
                             country: player.birthCountry,
-                            team: abbreviation,
-                            careerGoals: player.careerTotals.regularSeason.goals,
-                            careerAssists: player.careerTotals.regularSeason.assists,
-                            gamesPlayed: player.careerTotals.regularSeason.gamesPlayed,
-                            heightInches: player.heightInInches,
-                            weightPounds: player.weightInPounds,
-                            shootsCatches: player.shootsCatches,
+                            careerGoals: player.careerTotals.regularSeason.goals ?? 0,
+                            careerAssists: player.careerTotals.regularSeason.assists ?? 0,
+                            gamesPlayed: player.careerTotals.regularSeason.gamesPlayed ?? 1,
+                            heightInches: player.heightInInches ?? 72,
+                            weightPounds: player.weightInPounds ?? 200,
+                            shootsCatches: player.shootsCatches ?? 'L',
                             isActive: player.isActive,
                             picture: player.headshot,
                             birthDate: player.birthDate
                         };
+
+                        await prisma.player.upsert({
+                            where: { id: playerData.id },
+                            update: {
+                              fullName: playerData.fullName,
+                              position: playerData.position,
+                              country: playerData.country,
+                              careerGoals: playerData.careerGoals,
+                              careerAssists: playerData.careerAssists,
+                              gamesPlayed: playerData.gamesPlayed,
+                              heightInches: playerData.heightInches,
+                              weightPounds: playerData.weightPounds,
+                              shootsCatches: playerData.shootsCatches,
+                              isActive: playerData.isActive,
+                              picture: playerData.picture,
+                              birthDate: playerData.birthDate
+                            },
+                            create: playerData
+                          });
                         
+                          // Add entry to PlayerTeam
+                          await prisma.playerTeam.upsert({
+                            where: {
+                              playerId_teamId: {
+                                playerId: playerData.id,
+                                teamId: abbreviation
+                              }
+                            },
+                            update: {}, // no update needed
+                            create: {
+                              playerName: playerData.fullName,
+                              playerId: playerData.id,
+                              teamId: abbreviation,
+                              season: yearStr
+                            }
+                          });
                     } else {
                         console.log("ERROR: " + playerID + " did not exist");
                     }
                 } 
-
             } else {
                 console.log("ERROR: " + abbreviation + " did not exist in " + yearStr);
             }
-
-
         }
-
         // Increment years for next loop
         year = year + 1;
         yearPlusOne = yearPlusOne + 1;

@@ -19,7 +19,6 @@ model Player {
   fullName      String
   position      String
   country       String
-  team          String
   careerGoals   Int
   careerAssists Int
   gamesPlayed   Int
@@ -32,22 +31,22 @@ model Player {
   teams         PlayerTeam[]
 }
 
-model Team {
-  id            Int          @id @default(autoincrement())
-  abbreviation  String       @unique
+model Team { 
+  id            String       @id @unique
   name          String
   logo          String
   players       PlayerTeam[]
 }
 
 model PlayerTeam {
-  id        Int    @id @default(autoincrement())
-  playerId  Int
-  teamId    Int
-  season    String
+  id         Int    @id @default(autoincrement())
+  playerName String
+  playerId   Int
+  teamId     String
+  season     String
 
   player    Player @relation(fields: [playerId], references: [id])
   team      Team   @relation(fields: [teamId], references: [id])
 
-  @@unique([playerId, teamId, season]) // prevents duplicate rows
+  @@unique([playerId, teamId]) // prevents duplicate rows
 }
